@@ -1,0 +1,14 @@
+@media screen and (max-width: 900px) {
+    .carousel-item{
+        max-width: 900px;
+        height: 400px;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .carousel-item{
+        max-width: 500px;
+        height: 400px;
+        
+    }
+}

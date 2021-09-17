@@ -12,12 +12,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        
+
 
     <title>ChefRef-The Ultimate reference destination for all chef's</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
 
     <link rel="stylesheet" href="./index.css">
 
@@ -26,69 +26,22 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-light bg-light">
+
+    <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand custom-navbar-brand" href="#">
+            <a class="navbar-brand">
                 <img src="./images/favicon.png" width="51px" height="51px" alt="ChefRef logo">
                 ChefRef
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Search By
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Name</a></li>
-                            <li><a class="dropdown-item" href="#">Ingredient</a></li>
-                            <li><a class="dropdown-item" href="#">Category</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" id="search-bar" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
-    <!-- The carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./images/slide-1.jpg" height="500px" class="d-block  w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/slide-2.jpg" height="500px" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/slide-3.jpg" height="500px" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
     
+
 
 
     <!-- custom javascript -->
