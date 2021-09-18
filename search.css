@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: white;
 }
 /* styling the search box container */
 .search-box-container{
@@ -76,5 +76,5 @@ body{
 }
 .close i{
     transform: rotate(45deg);
-    color: white;
+    color: black;
 }

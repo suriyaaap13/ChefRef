@@ -1,20 +1,32 @@
-// // populate the index page with the fetched data
-// setTimeout(function () {
-//     console.log(meals.length);
-//     let html="";
-//     console.log(meals[0]);
-//     for(let i = meals[0];i<=0;i++){
-//         html+= 
-//         `<div class="card" style="width: 18rem;">
-//             <img src="" class="card-img-top" alt="${i.strMeal}">
-//             <div class="card-body">
-//             <h5 class="card-title">${i.strMeal}</h5>
-//             <p class="card-text">${i.strInstructions}</p>
-//             <a href="#" class="btn btn-primary"></a>
-//             </div>
-//         </div>`;
-//     }
+// populate the index page with the fetched data
+setTimeout(function () {
+    let html = "";
+    // iterating through the meals and storing the required data
+    for (let i of meals) {
+        html += `
+        <div class="col">
+            <div class="card shadow-sm">
+
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="${i.strMealThumb}" alt="">
+
+                <div class="card-body">
+                    <h5>${i.strMeal}</h5>
+                    <p class="card-text">${i.strInstructions}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">${i.strArea}</small>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    }
     
-//     console.log(html)
-//     document.querySelector('.custom-container').innerHTML= html;
-// }, 350);
+
+    // pushing the data to html page
+    document.querySelector('.cards-container').innerHTML= html;
+}, 1000);
+
+
