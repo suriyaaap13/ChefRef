@@ -1,0 +1,9 @@
+
+.custom-container{
+    /* width: 80%; */
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}

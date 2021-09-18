@@ -26,28 +26,71 @@
 
 <body>
 
-    <!-- Bootstrap Navbar -->
+    <!-- Bootstrap template -->
 
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand">
-                <i class="fas fa-utensils"></i>
-                ChefRef
-            </a>
 
+
+    <header>
+        <div class="bg-dark collapse" id="navbarHeader" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">This webpage has created for the cook inside everyone who just loves
+                            to try new things without any fear of failure.There are some awesome foods, ingredients
+                            and their recipes listed in our page along with the youtube lectures from our world
+                            class chefs.ChefRef is the ultimate reference destination for any cook in the world.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.themealdb.com/api.php" class="text-white">Follow on Twitter</a>
+                            </li>
+                            <li><a href="https://www.themealdb.com/api.php" class="text-white">Like on Facebook</a>
+                            </li>
+                            <li><a href="https://www.themealdb.com/api.php" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true"
+                            class="me-2" viewBox="0 0 24 24">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                            </path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg> -->
+                    <i class="fas fa-utensils mx-2"></i>
+                    <strong>ChefRef</strong>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <!--Bootstarp template -->
     <main>
 
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">ChefRef</h1>
-                    <p class="lead text-muted">The ultimate reference destination for all cooks</p>
+                    <p class="lead my-2">“...no one is born a great cook, one learns by doing.”</p>
+                    <p class="lead text-muted">
+                        The creators of this food gallery has spend more than 3 decades in the kitchen and they have
+                        also shared some of their secrets to get the best of the respective dishes.Now because of us
+                        “No one who cooks have to cook alone” we are always there with you in your kitchen
+                    </p>
                     <p>
-                        <a href="./search.html" class="btn btn-primary my-2">Search By Name</a>
+                        <a href="./search.html" class="btn btn-primary my-2">Search By Dish's Name</a>
                         <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
                     </p>
                 </div>
@@ -60,13 +103,14 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg> -->
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src=".." alt="">
 
                             <div class="card-body">
                                 <p class="card-text">This is a wider card with supporting text below as a natural
@@ -273,11 +317,31 @@
 
     </main>
 
+    <footer class="text-muted py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">ChefRef is © github</p>
+            <p class="mb-0"> <a href="https://github.com/suriyaaap13">Visit My Github Profile</a> get the <a
+                    href="https://github.com/suriyaaap13/ChefRef">source code</a> here.</p>
+        </div>
+    </footer>
 
 
 
-    <!-- custom javascript -->
-    <script src="./index.js"></script>
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap template js file  -->
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -288,9 +352,16 @@
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+
+    <!-- custom javascript files -->
+
+    <script src="./suggestions.js"></script>
+
+    <script src="./index.js"></script>
+
 </body>
 
 </html>
