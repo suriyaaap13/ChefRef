@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+}
+.search-box-container{
+    width: 750px;
+    margin: 70px auto;
+    
+}
+.input-Box{
+    position: relative;
+}
+.input-Box input{
+    padding: 0px 60px 0px 20px;
+    height: 55px;
+    width: 700px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 0px 10px 2px gray;
+}
+.autocom-Box{
+    display: none;
+}
+.input-Box .autocom-Box li{
+    list-style: none;
+    background: white;
+    height: 55px;
+    width: 700px;
+    padding: 15px 5px;
+    font-size: 18px;
+}
+.input-Box .autocom-Box li:hover{
+    background: whitesmoke;
+}
+.input-Box .icon{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    font-size: 18px;
+    padding: 5px;
+    top: 0px;
+    right: 50px;
+    margin-left: 5px;
+    transition: 0.4s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.icon:hover{
+    background: #7c7c7c2b;
+}
+.input-Box .close{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    font-size: 40px;
+    top: 0;
+    right: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.close i{
+    transform: rotate(45deg);
+    color: white;
+}
