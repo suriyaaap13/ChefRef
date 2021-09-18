@@ -1,14 +1,17 @@
 body{
     background-color: black;
 }
+/* styling the search box container */
 .search-box-container{
     width: 750px;
     margin: 70px auto;
     
 }
+/* setting the position relative for positioning the icons */
 .input-Box{
     position: relative;
 }
+/* styling the input box */
 .input-Box input{
     padding: 0px 60px 0px 20px;
     height: 55px;
@@ -18,20 +21,27 @@ body{
     border: none;
     box-shadow: 1px 0px 10px 2px gray;
 }
-.autocom-Box{
-    display: none;
-}
+/* Styling the suggestion box/auto complete box */
 .input-Box .autocom-Box li{
     list-style: none;
     background: white;
     height: 55px;
     width: 700px;
-    padding: 15px 5px;
+    padding: 20px 60px 5px 20px;
     font-size: 18px;
 }
 .input-Box .autocom-Box li:hover{
     background: whitesmoke;
 }
+/* Setting the display to none by default */
+.input-Box .autocom-Box{
+    display: none;
+}
+/* .active class will be added by js file so that we can show suggestions */
+.input-Box .active{
+    display: block;
+}
+/* Styling the search icon */
 .input-Box .icon{
     position: absolute;
     height: 55px;
@@ -51,6 +61,7 @@ body{
 .icon:hover{
     background: #7c7c7c2b;
 }
+/* Styling the close icon */
 .input-Box .close{
     position: absolute;
     height: 55px;
