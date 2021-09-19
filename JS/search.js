@@ -181,6 +181,7 @@ function getMealPage(index) {
         
         <div class="modal-footer flex-column border-top-0">
             <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="fav-btn" class="btn btn-lg btn-primary w-100 mx-0" data-bs-dismiss="modal">Add to Favorite</button>
         </div>
         `;
         // pushing the changes to html
@@ -193,6 +194,21 @@ function getMealPage(index) {
         }
         close2.onclick = function(){
             document.querySelector('.my-modal').classList.add('active');
+        }
+
+
+        //adding function to Add to Favorite btn
+        var fav = document.querySelector('#fav-btn') 
+        console.log(fav);
+        fav.onclick = function(){
+            document.getElementById('fav-btn').classList.toggle('btn-danger');
+            if(fav.classList.contains('btn-danger')){
+                fav.innerHTML = "Remove from Favourites";
+                favMap.set(meals[index],true);
+            }else{
+                fav.innerHTML = "Add to Favourites";
+                favMap.set(meals[index],false);
+            }
         }
 
     }

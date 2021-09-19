@@ -1,5 +1,6 @@
 body{
     background-color: white;
+    height: 100vh;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -241,4 +242,8 @@ body::-webkit-scrollbar{
     
     
 }
-
+.custom-footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

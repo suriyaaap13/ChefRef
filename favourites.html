@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,23 +9,15 @@
     <script src="https://kit.fontawesome.com/af8f003157.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-
-    <title>ChefRef-The Ultimate reference destination for all chef's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="./images/favicon.png" />
 
-    <link rel="stylesheet" href="./CSS/index.css">
-
-</head>
-
-<body>
-
-    <!-- Bootstrap template -->
-
+    <title>ChefRef-Your Favourites</title>
+  </head>
+  <body>
+    
     <header>
         <div class="bg-dark collapse" id="navbarHeader" >
             <div class="container">
@@ -68,81 +58,17 @@
         </div>
     </header>
 
-    <main>
 
-        <!-- page title -->
+    
 
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">ChefRef</h1>
-                    <p class="lead my-2">“...no one is born a great cook, one learns by doing.”</p>
-                    <p class="lead text-muted">
-                        The creators of this food gallery has spend more than 3 decades in the kitchen and they have
-                        also shared some of their secrets to get the best of the respective dishes.Now because of us
-                        “No one who cooks have to cook alone” we are always there with you in your kitchen
-                    </p>
-                    <p>
-                        <a href="./search.html" class="btn btn-primary my-2">Search By Dish's Name</a>
-                        <a href="#" class="btn btn-danger my-2">Your Favourites</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page Cards -->
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 cards-container">
-                    <!-- card it is added by index.js -->
-
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="text-muted py-5">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">ChefRef is © github</p>
-            <p class="mb-0"> <a href="https://github.com/suriyaaap13" target="_blank">Visit My Github Profile</a> get the <a
-                    href="https://github.com/suriyaaap13/ChefRef" target="_blank">source code</a> here.</p>
-        </div>
-    </footer>
-
-    <!-- Modal content -->
-
-    <div class="my-modal active">
-        <div class="modal modal-ku modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog"
-            id="modalSheet">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content rounded-6 shadow">
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
 
-    <!-- custom javascript files -->
-
-    <script src="./JS/suggestions.js"></script>
-
-    <script src="./JS/index.js"></script>
-
-    <script src="./JS/favourite.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -150,6 +76,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
     -->
 
-</body>
+    <!-- custom js file -->
+    <script src="./JS/favourite.js"></script>
+    <script src="./JS/displayFav.js"></script>
 
+  </body>
 </html>
