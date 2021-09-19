@@ -1,6 +1,9 @@
 body{
     background-color: white;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 /* styling the search box container */
 .search-box-container{
     width: 750px;
@@ -29,6 +32,7 @@ body{
     width: 700px;
     padding: 20px 60px 5px 20px;
     font-size: 18px;
+    cursor: pointer;
 }
 .input-Box .autocom-Box li:hover{
     background: whitesmoke;
@@ -38,7 +42,7 @@ body{
     display: none;
 }
 /* .active class will be added by js file so that we can show suggestions */
-.input-Box .active{
+.input-Box .sugg-active{
     display: block;
 }
 /* Styling the search icon */
@@ -78,3 +82,52 @@ body{
     transform: rotate(45deg);
     color: black;
 }
+/* Styling modal */
+.modal::-webkit-scrollbar{
+    display: none;
+}
+/* to make modal occupy the full view port */
+.my-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+/* helps to toggle between the visibility of modal */
+.active{
+    display: none;
+}
+.modal-ku{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+/* Styling the containters */
+.category-container{
+    display: flex;
+    margin-left: 15px;
+}
+.category-container p{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+.ingredients-container{
+    margin-left: 15px;
+}
+#instruction-heading{
+    margin-left: 15px;
+}
+/* Styling img */
+.dish-img{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+/* Styling video-link */
+.video-link{
+    display: flex;
+    justify-content: center;
+}
+

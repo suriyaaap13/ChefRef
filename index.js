@@ -1,4 +1,5 @@
 // populate the index page with the fetched data
+
 setTimeout(function () {
     let html = "";
     // iterating through the meals and storing the required data
@@ -29,8 +30,12 @@ setTimeout(function () {
     // pushing the data to html page
     document.querySelector('.cards-container').innerHTML= html;
     viewBtnClick();
+    for(var key in hash){
+        console.log('key is :' + key + ' and value is : '+ hash[key])
+    }
 }, 1000);
 
+// function that triggers the mealPage
 function viewBtnClick(){
 
     var btns = document.querySelectorAll('.btn');
@@ -39,7 +44,6 @@ function viewBtnClick(){
             var value = this.getAttribute('data-value');
             document.querySelector('.my-modal').classList.remove('active');
             getMealPage(value);
-
             
         });
     }
@@ -53,6 +57,7 @@ function getMealPage(index) {
     if (data!=null) {
         let ingredient = undefined;
         let a = new Array();
+        // fetch ingredient from the data and storing in an array
         a[0] = data.strIngredient1;
         a[1] = data.strIngredient2;
         a[2] = data.strIngredient3;
@@ -61,7 +66,9 @@ function getMealPage(index) {
         a[5] = data.strIngredient6;
         a[6] = data.strIngredient7;
         a[7] = data.strIngredient8;
+        // joining the array to form a string
         ingredient = a.join();
+        // changing some html so that it can change value for the requested meal.
         let html = "";
         html = `
         <div class="modal-header border-bottom-0">
@@ -103,17 +110,20 @@ function getMealPage(index) {
         </div>
         
         <div class="modal-footer flex-column border-top-0">
-            <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="close-btn btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Close</button>
         </div>
         `;
+        // pushing the changes to html
         document.querySelector('.modal-content').innerHTML = html;
-        var close1 = document.querySelector('.btn-close');
-        var close2 = document.querySelector('.btn');
 
+        var close1 = document.querySelector('.btn-close');
+        var close2 = document.querySelector('.close-btn');
+        // function to redirect to back on click of close
         close1.onclick = function(){
             document.querySelector('.my-modal').classList.add('active');
         }
         close2.onclick = function(){
+            console.log('hello');
             document.querySelector('.my-modal').classList.add('active');
         }
 

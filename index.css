@@ -1,3 +1,8 @@
+/* hides scrollbar */
+body::-webkit-scrollbar{
+    display: none;
+}
+/* To hide text overflow(above 300px is hidden) */
 .card-text{
     /* display: inline-block; */
     width: 300px;
@@ -5,6 +10,7 @@
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+/* to make modal occupy the full view port */
 .my-modal{
     position: fixed;
     top: 0;
@@ -13,11 +19,8 @@
     height: 100%;
     z-index: 1;
 }
+/* helps to toggle between the visibility of modal */
 .active{
-    display: none;
-}
-
-body::-webkit-scrollbar{
     display: none;
 }
 .modal-ku{
@@ -25,20 +28,12 @@ body::-webkit-scrollbar{
     height: 100vh;
     margin: auto;
 }
+.modal::-webkit-scrollbar{
+    display: none;
+}
+/* Styling the containters */
 .ingredients-container{
     margin-left: 15px;
-}
-#instruction-heading{
-    margin-left: 15px;
-}
-.dish-img{
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-}
-.video-link{
-    display: flex;
-    justify-content: center;
 }
 .category-container{
     display: flex;
@@ -48,6 +43,18 @@ body::-webkit-scrollbar{
     margin-left: 10px;
     font-size: 1.1rem;
 }
-.modal::-webkit-scrollbar{
-    display: none;
+#instruction-heading{
+    margin-left: 15px;
 }
+/* Styling img */
+.dish-img{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+/* Styling video-link */
+.video-link{
+    display: flex;
+    justify-content: center;
+}
+
