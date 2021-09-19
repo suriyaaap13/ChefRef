@@ -4,12 +4,12 @@ body::-webkit-scrollbar{
 }
 /* To hide text overflow(above 300px is hidden) */
 .card-text{
-    /* display: inline-block; */
-    width: 300px;
+    width: 200px;
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+
 /* to make modal occupy the full view port */
 .my-modal{
     position: fixed;
