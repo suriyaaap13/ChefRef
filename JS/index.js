@@ -30,9 +30,10 @@ setTimeout(function () {
     }
     // pushing the data to html page
     document.querySelector('.cards-container').innerHTML= html;
+    callFavourite();
     viewBtnClick();
-    heyyo();
-}, 1000);
+    
+}, 1200);
 
 // function that triggers the mealPage
 function viewBtnClick(){
@@ -108,11 +109,14 @@ function getMealPage(index) {
             </a>
         </div>
         
-        <div class="modal-footer flex-column border-top-0">
+        <div id="show-fav-status" class="modal-footer flex-column border-top-0">
             <button type="button" class="close-btn btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Close</button>
-            <button type="button" id="fav-btn" class="btn btn-lg btn-primary w-100 mx-0" data-bs-dismiss="modal">Add to Favorite</button>
+            
         </div>
         `;
+
+        
+        
         // pushing the changes to html
         document.querySelector('.modal-content').innerHTML = html;
 
@@ -127,6 +131,30 @@ function getMealPage(index) {
             document.querySelector('.my-modal').classList.add('active');
         }
 
+        // creating button Node  
+        var z = document.createElement('button');
+        // setting all the class and attributes as in bootstrap button
+        z.classList.add("btn");
+        z.classList.add("btn-lg");
+        z.classList.add("btn-primary");
+        z.classList.add("w-100");
+        z.classList.add("mx-0");
+        z.setAttribute("data-bs-dismiss","modal");
+        z.setAttribute("id","fav-btn");
+        console.log(z);
+        // if the respective meal is set to true then show remove from fav/ show add to fav
+        if(favMap.get(meals[index])){
+            z.classList.add("btn-danger");
+            z.innerHTML = "Remove from Favourites"
+            document.getElementById('show-fav-status').appendChild(z);
+        }else{
+            z.classList.add("btn-primary");
+            z.innerHTML = "Add to Favourites"
+            document.getElementById('show-fav-status').appendChild(z);
+        }
+
+        
+
         //adding function to Add to Favorite btn
         var fav = document.querySelector('#fav-btn') 
         console.log(fav);
@@ -138,6 +166,7 @@ function getMealPage(index) {
             }else{
                 fav.innerHTML = "Add to Favourites";
                 favMap.set(meals[index],false);
+                
             }
         }
 
@@ -145,7 +174,6 @@ function getMealPage(index) {
 
 
 }
-
 
 
 
