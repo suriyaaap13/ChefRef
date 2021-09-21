@@ -30,7 +30,6 @@ setTimeout(function () {
     }
     // pushing the data to html page
     document.querySelector('.cards-container').innerHTML= html;
-    callFavourite();
     viewBtnClick();
     
 }, 1200);

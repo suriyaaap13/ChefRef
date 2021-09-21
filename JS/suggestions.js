@@ -11,6 +11,20 @@ function getMeals(){
             meals[k++] = i;
         }
     });
+    
 }
 // calling the function getMeals to fetch the data
 getMeals();
+setTimeout(function(){
+    let meals_searialized = JSON.stringify(meals);
+    localStorage.setItem("meals",meals_searialized);
+    let meals_desearialized = JSON.parse(meals_searialized);
+    console.log(meals_desearialized);
+
+},1200);
+
+
+
+
+
+    
