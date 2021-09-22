@@ -1,27 +1,20 @@
 let meals = new Array();
-setTimeout(function(){
-    let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
-    console.log(meals_desearialized);
-    meals = meals_desearialized;
-},1000);
+let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
+console.log(meals_desearialized);
+meals = meals_desearialized;
 
 let favArray = new Array();
-setTimeout(function(){
-    console.log(JSON.parse(localStorage.getItem("fav_array")));
-    favArray = JSON.parse(localStorage.getItem("fav_array"));
-
-},1350);
+console.log(JSON.parse(localStorage.getItem("fav_array")));
+favArray = JSON.parse(localStorage.getItem("fav_array"));
 
 window.onload = function(){
     console.log('hello');
-    setTimeout(function(){
-        console.log('hello2');
-        console.log(localStorage.getItem("displayMealPageValue"));
-        var n = JSON.parse(localStorage.getItem("displayMealPageValue"));
-        console.log(meals[n].strMeal);
-        document.title = meals[n].strMeal+" - Meal Page";
-        getMealPage(JSON.parse(localStorage.getItem("displayMealPageValue")));
-    },1400);
+    console.log('hello2');
+    console.log(localStorage.getItem("displayMealPageValue"));
+    var n = JSON.parse(localStorage.getItem("displayMealPageValue"));
+    console.log(meals[n].strMeal);
+    document.title = meals[n].strMeal+" - Meal Page";
+    getMealPage(JSON.parse(localStorage.getItem("displayMealPageValue")));
 }
 
 

@@ -3,7 +3,7 @@ setTimeout(function () {
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
     console.log(meals_desearialized);
     meals = meals_desearialized;
-}, 1200);
+}, 850);
 
 
 let favArray = new Array();
@@ -11,7 +11,7 @@ setTimeout(function () {
     console.log(JSON.parse(localStorage.getItem("fav_array")));
     favArray = JSON.parse(localStorage.getItem("fav_array"));
 
-}, 1350);
+}, 850);
 
 // populate the index page with the fetched data
 
@@ -40,17 +40,6 @@ setTimeout(function () {
                 </div>
             </div>
         </div>`
-
-        // making a fav btn next to view btn
-        // creating button Node  
-        // setting all the class and attributes as in bootstrap button
-        // if the respective meal is set to true then show remove from fav/ show add to fav
-        // console.log(k, favArray[k]);
-        // if (favArray[k]) {
-        //     document.getElementById('my-btn').classList.add('btn-danger');
-        // }else{
-        //     document.getElementById('my-btn').classList.add('btn-outline-secondary');
-        // }
         k++;
 
     }
@@ -79,7 +68,7 @@ setTimeout(function () {
     }
     viewBtnClick();
 
-}, 1400);
+}, 850);
 
 // function that triggers the mealPage
 function viewBtnClick() {

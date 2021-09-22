@@ -3,7 +3,7 @@ setTimeout(function(){
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
     console.log(meals_desearialized);
     meals = meals_desearialized;
-},1000);
+},850);
 
 
 // importing audio files
