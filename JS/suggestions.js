@@ -1,5 +1,5 @@
 //creating meals array to capture all the data from API
-let meals = new Array();
+let mealAPIData = new Array();
 var k=0;
 function getMeals(){
     //fetch the data from API
@@ -8,7 +8,7 @@ function getMeals(){
     .then(data=>{
         // storing the data in meals array
         for(let i of data.meals){
-            meals[k++] = i;
+            mealAPIData[k++] = i;
         }
     });
     
@@ -16,10 +16,10 @@ function getMeals(){
 // calling the function getMeals to fetch the data
 getMeals();
 setTimeout(function(){
-    let meals_searialized = JSON.stringify(meals);
-    localStorage.setItem("meals",meals_searialized);
-    let meals_desearialized = JSON.parse(meals_searialized);
-    console.log(meals_desearialized);
+    let meals_searialized = JSON.stringify(mealAPIData);
+    // localStorage.setItem("meals",meals_searialized);
+    // let meals_desearialized = JSON.parse(meals_searialized);
+    // console.log(meals_desearialized);
 
 },1200);
 

@@ -1,0 +1,48 @@
+/* hides scrollbar */
+body::-webkit-scrollbar{
+    display: none;
+}
+/* to make modal occupy the full view port */
+.my-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+/* helps to toggle between the visibility of modal */
+.modal-ku{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+.modal::-webkit-scrollbar{
+    display: none;
+}
+/* Styling the containters */
+.ingredients-container{
+    margin-left: 15px;
+}
+.category-container{
+    display: flex;
+    margin-left: 15px;
+}
+.category-container p{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+#instruction-heading{
+    margin-left: 15px;
+}
+/* Styling img */
+.dish-img{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+/* Styling video-link */
+.video-link{
+    display: flex;
+    justify-content: center;
+}
