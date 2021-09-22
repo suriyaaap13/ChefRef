@@ -17,11 +17,11 @@ function getMeals(){
 getMeals();
 setTimeout(function(){
     let meals_searialized = JSON.stringify(mealAPIData);
-    // localStorage.setItem("meals",meals_searialized);
-    // let meals_desearialized = JSON.parse(meals_searialized);
-    // console.log(meals_desearialized);
+    localStorage.setItem("meals",meals_searialized);
+    let meals_desearialized = JSON.parse(meals_searialized);
+    console.log(meals_desearialized);
 
-},1200);
+},1100);
 
 
 

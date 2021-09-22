@@ -3,10 +3,14 @@ setTimeout(function(){
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
     console.log(meals_desearialized);
     meals = meals_desearialized;
-    // console.log(localStorage.getItem("displayMealPageValue"));
-    // console.log(JSON.parse(localStorage.getItem("displayMealPageValue")));
-    // getMealPage(JSON.parse(localStorage.getItem("displayMealPageValue")));
 },1000);
+
+let favArray = new Array();
+setTimeout(function(){
+    console.log(JSON.parse(localStorage.getItem("fav_array")));
+    favArray = JSON.parse(localStorage.getItem("fav_array"));
+
+},1350);
 
 window.onload = function(){
     console.log('hello');
@@ -17,7 +21,7 @@ window.onload = function(){
         console.log(meals[n].strMeal);
         document.title = meals[n].strMeal+" - Meal Page";
         getMealPage(JSON.parse(localStorage.getItem("displayMealPageValue")));
-    },1200);
+    },1400);
 }
 
 
@@ -113,11 +117,14 @@ function getMealPage(index) {
         z.setAttribute("id","fav-btn");
         console.log(z);
         // if the respective meal is set to true then show remove from fav/ show add to fav
-        if(favMap.get(meals[index])){
+        console.log(index, favArray[index]);
+        if(favArray[index]){
+            console.log('fav');
             z.classList.add("btn-danger");
             z.innerHTML = "Remove from Favourites"
             document.getElementById('show-fav-status').appendChild(z);
         }else{
+            console.log('not fav');
             z.classList.add("btn-primary");
             z.innerHTML = "Add to Favourites"
             document.getElementById('show-fav-status').appendChild(z);
@@ -125,19 +132,22 @@ function getMealPage(index) {
 
         
 
-        //adding function to Add to Favorite btn
+        //adding function to Add to toggle Favorite btn on click
         var fav = document.querySelector('#fav-btn') 
-        console.log(fav);
+        // console.log(fav);
         fav.onclick = function(){
             document.getElementById('fav-btn').classList.toggle('btn-danger');
             if(fav.classList.contains('btn-danger')){
                 fav.innerHTML = "Remove from Favourites";
-                favMap.set(meals[index],true);
+                favArray[index] = true;
+                
             }else{
                 fav.innerHTML = "Add to Favourites";
-                favMap.set(meals[index],false);
+                favArray[index] = false;
                 
             }
+            let serialized = JSON.stringify(favArray);
+            localStorage.setItem("fav_array",serialized);
         }
 
     }
