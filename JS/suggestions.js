@@ -19,11 +19,11 @@ function getMeals(){
 
 // storing the fetched array in local storage
 setTimeout(function(){
-    
+    console.log('I am in',mealAPIData.length);
     let meals_searialized = JSON.stringify(mealAPIData);
     localStorage.setItem("meals",meals_searialized);
     let meals_desearialized = JSON.parse(meals_searialized);
-},870);
+},900);
 
 
 
