@@ -19,10 +19,7 @@ body::-webkit-scrollbar{
     height: 100%;
     z-index: 1;
 }
-/* helps to toggle between the visibility of modal */
-.active{
-    display: none;
-}
+
 .modal-ku{
     width: 100%;
     height: 100vh;
@@ -56,4 +53,8 @@ body::-webkit-scrollbar{
 .video-link{
     display: flex;
     justify-content: center;
+}
+/*  */
+.fav-dish{
+    color: red;
 }
