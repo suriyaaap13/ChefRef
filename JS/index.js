@@ -1,3 +1,4 @@
+// fetching the dishes from the local Storage
 let meals = new Array();
 setTimeout(function () {
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
@@ -5,7 +6,7 @@ setTimeout(function () {
     meals = meals_desearialized;
 }, 850);
 
-
+// fetching the favorite boolean array from the local Storage
 let favArray = new Array();
 setTimeout(function () {
     console.log(JSON.parse(localStorage.getItem("fav_array")));

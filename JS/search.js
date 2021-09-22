@@ -1,3 +1,4 @@
+// fetching the dishes from the local Storage
 let meals = new Array();
 setTimeout(function(){
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));

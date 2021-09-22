@@ -1,8 +1,10 @@
+// fetching the dishes from the local Storage
 let meals = new Array();
 let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
 console.log(meals_desearialized);
 meals = meals_desearialized;
 
+// fetching the favorite boolean array from the local Storage
 let favArray = new Array();
 console.log(JSON.parse(localStorage.getItem("fav_array")));
 favArray = JSON.parse(localStorage.getItem("fav_array"));
