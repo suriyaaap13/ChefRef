@@ -1,0 +1,7 @@
+/* To hide text overflow(above 300px is hidden) */
+.card-text{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

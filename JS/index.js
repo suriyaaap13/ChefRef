@@ -52,9 +52,6 @@ function viewBtnClick(){
             localStorage.setItem("displayMealPageValue",value_serialized);
             console.log("value",value);
             location.replace('./meal-page.html');
-
-            
-            
         });
     }
 
