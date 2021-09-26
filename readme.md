@@ -1,7 +1,6 @@
 
 # ChefRef
 
-https://suriyaaap13.github.io/ChefRef/index.html
 
 Simple reciepe app for the cook's reference using html,css and js
 
@@ -46,5 +45,6 @@ Simple reciepe app for the cook's reference using html,css and js
     some improvements can be made, some are the users should be allowed to 
     search via category of the meal and the search box suggestions can be 
     improved
-
+## Link
+    https://suriyaaap13.github.io/ChefRef/index.html
 
