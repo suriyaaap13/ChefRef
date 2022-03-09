@@ -1,22 +1,41 @@
-// fetching the dishes from the local Storage
+// declaring arrays
 let meals = new Array();
-setTimeout(function () {
+let favArray = new Array();
+
+// fetching the dishes from the local Storage
+function fetchData() {
     let meals_desearialized = JSON.parse(localStorage.getItem("meals"));
     console.log(meals_desearialized);
     meals = meals_desearialized;
-}, 1000);
+    fetchfav();
+}
 
 // fetching the favorite boolean array from the local Storage
-let favArray = new Array();
-setTimeout(function () {
+
+let fetchfav = function () {
+    // array that can store whether the respective food item is true/false(favourite or not)
+    let fav = new Array();
+    // allowing to the user to access the file only through index.html and only once till you clear the browser storage
+    // if it is allowed multiple times then we will set all the values to false again and again
+    if(localStorage.getItem("fav_array")==null){
+        // ccreating a boolean array of length number of meals and initialize false to all the elements
+        for(let i=0;i<mealAPIData.length;i++){
+            fav[i] = false;
+        }
+        console.log('I am in displayFav fav length ',fav.length);
+        // converting array to string
+        let fav_serialized = JSON.stringify(fav);
+        // Storing the converted array in localStorage
+        localStorage.setItem("fav_array",fav_serialized);
+    }
     console.log(JSON.parse(localStorage.getItem("fav_array")));
     favArray = JSON.parse(localStorage.getItem("fav_array"));
-
-}, 850);
+    renderPage();
+}
 
 // populate the index page with the fetched data
 
-setTimeout(function () {
+let renderPage = function () {
     let html = "";
     // iterating through the meals and storing the required data
     let k = 0;
@@ -69,7 +88,16 @@ setTimeout(function () {
     }
     viewBtnClick();
 
-}, 1000);
+}
+
+var myTimer = setInterval(function(){
+    if(localStorage.getItem("meals")!=null){
+        fetchData();
+        clearInterval(myTimer);
+    }
+},10)
+
+
 
 // function that triggers the mealPage
 function viewBtnClick() {
@@ -87,5 +115,3 @@ function viewBtnClick() {
     }
 
 }
-
-
